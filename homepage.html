@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TSF</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #7288F5;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #264F7C;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #33ECFF;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #7288F5;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+article{
+    image: url('bank.jpeg');
+}
+.button{
+  background-color: #7288F5;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button{
+  background-color: #264F7C;
+}
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>THE SPARKS FOUNDATION</h2>
+</header>
+
+<section>
+  <nav>
+  <img style='height: 100%; width: 100%; object-fit: contain' src="bank.jpeg" alt="Girl in a jacket">
+  </nav>
+  
+  <article>
+    <h1>Banking System</h1>
+    <p>Using this website of ours you can transfer money to any cutomer registered in our bank</p>
+<form method=post action=dispaly.PHP  enctype="multipart/form-data">
+   <input type="submit" name="button1"
+                class="button" value="View All Customers" />
+          
+    </form><br>
+    <form method=post action=Transactions.PHP  enctype="multipart/form-data">
+      <input type="submit" name="button1"
+                   class="button" value="View All Transactions" />
+             
+       </form>
+   
+  </article>
+</section>
+
+<footer>
+  <p>Thankyou!</p>
+</footer>
+
+</body>
+</html>
